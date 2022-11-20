@@ -1,0 +1,807 @@
+{
+	"info": {
+		"_postman_id": "5b6fcc94-330a-408d-aba0-e3dec7a8dd7d",
+		"name": "Capstone-Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Producer",
+			"item": [
+				{
+					"name": "Get data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Hong\",\n    \"gender\":\"Female\",\n    \"age\":100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Gone with the wind\",\n    \"release_date\":\"12/24/2022\",\n    \"actors\":[\"Hong\",\"Linh\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Linh\",\n    \"gender\":\"Female\",\n    \"age\":100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor/2/",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"\",\n    \"release_date\":\"\",\n    \"add_actors\":[\"Linh\"],\n    \"remove_actors\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie/2",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie/1",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor/1",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im9Fa1VVQk5lMlRlNW5nY0ZQbUd1USJ9.eyJpc3MiOiJodHRwczovL2Rldi1pZ28yZ2w3dnh0Z2VjdjY0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MzY2MmQ0NWJmOTYzMTFmNWJiZGI4YWQiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY2ODk0OTkxNywiZXhwIjoxNjY5MDM2MzE3LCJhenAiOiJqZXdPalE2a3dWcXl1M0N0cmJDN0lSc0pzR1lmekw0bCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRhdGEiLCJtb2RpZnk6YWN0b3IiLCJtb2RpZnk6bW92aWUiLCJwYXRjaDpkYXRhIl19.VoBSdSix9dZ6g6A4ZFEbEWFqx7vUHfgt4Ils0q6PuFGSZOx_yu5GB6w6bMO54cCl8tkz41FPllK9aBw2gVxFBtGzer1tAAGjcIxuVZVyXyBJHNcj4qWZgWi6ADXtZnSR7dWgP90Bc6vw8JoRAnSXLNLkZJj0uw3om_0m3T_4OYkEGNBE_w9lrVoXTIP5P7gPeQhplCOA0Dpzt6jH1zwKu7tpFZNn8AJpYN_P0HCxzKI4gYUu1Lx9knFXBUTyvzfBPFbZoCiwRhehGgsP7sxpjIOVubOlwczCg2rR4OXPkb9TGyD_keBdao9KAQT9j9StjmKApwO8ltFiigJm-SQXVA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Assistant",
+			"item": [
+				{
+					"name": "Get data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Phan\",\n    \"gender\":\"Female\",\n    \"age\":30,\n    \"movie\":3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Gone with the wind\",\n    \"release_date\":\"12/24/2022\",\n    \"actors\":[\"Hong\",\"Linh\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Linh\",\n    \"gender\":\"Female\",\n    \"age\":100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor/2/",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"\",\n    \"release_date\":\"\",\n    \"add_actors\":[\"Linh\"],\n    \"remove_actors\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie/2",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie/1",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor/1",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im9Fa1VVQk5lMlRlNW5nY0ZQbUd1USJ9.eyJpc3MiOiJodHRwczovL2Rldi1pZ28yZ2w3dnh0Z2VjdjY0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MzY2MmQ3OTAwZjkxMzhiNzI5YmM4OWIiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY2ODk1MDA2MSwiZXhwIjoxNjY5MDM2NDYxLCJhenAiOiJqZXdPalE2a3dWcXl1M0N0cmJDN0lSc0pzR1lmekw0bCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRhdGEiXX0.D9BCUO8pHbdHd-fhn-bppm6W0Ta98lolQpVxlSib76xi5QA7BzO-BHhXvlGfSH9U1F61H_E3Lf_C60yM9Hf76KHK9KVl0RRPOUVw1X-cFCNN-3DLL4Y3yHkxWCkwnrVPhqSR3mD5_u5dO-E2NiudijoKaP9QqvWpZGRej2dTQcPHk-ZpbxS_Uckudv6FYX6iDJkSMhRocfJEocoFIh5zaZLbQIj4OZ79iOcArTTV_3_iRAulksFdVubWk049fgQwf-xqWmAS0yEzBIZLOlx6yn87OkRcIQtvDNuf2v4VjupYz5y9Gs12zuwSq4cDZUKhlNmSnLwTRUzRocs733Ofug",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Director",
+			"item": [
+				{
+					"name": "Get data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Hong\",\n    \"gender\":\"Female\",\n    \"age\":100,\n    \"movie\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Gone with the wind\",\n    \"release_date\":\"12/24/2022\",\n    \"actors\":[\"Hong\",\"Linh\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Linh\",\n    \"gender\":\"Female\",\n    \"age\":100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor/2/",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"\",\n    \"release_date\":\"\",\n    \"add_actors\":[\"Linh\"],\n    \"remove_actors\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie/2",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movie/1",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actor/1",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://duyhuynhnguyen-final.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"duyhuynhnguyen-final",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im9Fa1VVQk5lMlRlNW5nY0ZQbUd1USJ9.eyJpc3MiOiJodHRwczovL2Rldi1pZ28yZ2w3dnh0Z2VjdjY0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MzY2MmQ5ZTAwZjkxMzhiNzI5YmM4OWYiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY2ODk0OTk5MSwiZXhwIjoxNjY5MDM2MzkxLCJhenAiOiJqZXdPalE2a3dWcXl1M0N0cmJDN0lSc0pzR1lmekw0bCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRhdGEiLCJtb2RpZnk6YWN0b3IiLCJwYXRjaDpkYXRhIl19.Gn9w_w6TVLRRVf88ffsHxbmahL3XbxlLKFsDUxdISAmOYq_CX1ISNo2Kjtilh4q6hS_YglfyYlk55cpGs_WC-SKkc0NMbvMnv7aD8bCmsZCnwXfYu2HYgRUG_-FomCPl5Bywq2u8MzI4AVS9M-pRxbKbOGKi7pcQ1CpeF214j8fRDt3jjjHLtMHWGJFLWNzSdWPQuSdJ_9-evWnpnt2adcKJPrjD1OohiyBMDiPnoJq-oKUimfjCHc_-ztB7D1uuhopfWhm7f3VSRXNmWt80iFdok3Xy7u4wJfUdpyA_Zm7AlvZoMYFo_hhfv2wl0EueSQGiNQ_aEfZ2ptq5pcglRg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im9Fa1VVQk5lMlRlNW5nY0ZQbUd1USJ9.eyJpc3MiOiJodHRwczovL2Rldi1pZ28yZ2w3dnh0Z2VjdjY0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MzY2MmQ0NWJmOTYzMTFmNWJiZGI4YWQiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY2ODgzMjgzOCwiZXhwIjoxNjY4OTE5MjM4LCJhenAiOiJqZXdPalE2a3dWcXl1M0N0cmJDN0lSc0pzR1lmekw0bCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRhdGEiLCJtb2RpZnk6YWN0b3IiLCJtb2RpZnk6bW92aWUiLCJwYXRjaDpkYXRhIl19.VBlBNLtfbtrgMKvemFJz79-YXi5FfnjC9d0gZOnf6vrAngYxS3p8avOYb1Xwsco8jNtXAeYFaseVuuf8BHugu9_K5_LGBUd83mUcve6E5k3v4TyBotmwgX_hSxNGADGFHRv3RLXE7j2DFYiaWI43LS49J6Dz8D9nA3zEMktlVrxdzsAVjIdfDmmzsnppsy9TPw3jCGrd6zsMvQN7IFV7OrohSu7fyTfmvM4sftuqmgDBm6ayFWO1avasZ0dS7j5-BjsDhv6uQ_YPoaHL-yAqjTQEMULuHpTl6KRe29xoYBntid3y0c7yZO3m-P_3H85YeVGAo-AJSLUWo0vFAHVudA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
